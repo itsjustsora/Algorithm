@@ -1,4 +1,4 @@
-package practice.array;
+package stage.array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
