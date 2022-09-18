@@ -1,23 +1,22 @@
-package stage.array;
+package array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main0207 {
+public class Main0208 {
 
-    public static int solution(int n, int[] arr) {
-        int sum = 0, cnt = 0;
+    private static int[] solution(int n, int[] arr) {
+        int[] answer = new int[n];
 
         for(int i = 0; i < n; i++) {
-            if(arr[i] == 1) {
-                cnt++;
-                sum += cnt;
+            int cnt = 1;
+            for(int j = 0; j < n; j++) {
+                if(arr[j] > arr[i]) cnt++;
             }
-            else cnt = 0;
+            answer[i] = cnt;
         }
-
-        return sum;
+        return answer;
     }
 
     public static void main(String[] args) throws IOException {
@@ -30,6 +29,8 @@ public class Main0207 {
             arr[i] = Integer.parseInt(str[i]);
         }
 
-        System.out.println(solution(n, arr));;
+        for(int t : solution(n, arr)) {
+            System.out.print(t + " ");
+        }
     }
 }
