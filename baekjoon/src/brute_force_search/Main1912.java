@@ -1,6 +1,4 @@
-package Brute_force_search;
-
-import java.util.ArrayList;
+package brute_force_search;
 
 public class Main1912 {
     public static void main(String[] args) {

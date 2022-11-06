@@ -1,4 +1,4 @@
-package Brute_force_search;
+package brute_force_search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
