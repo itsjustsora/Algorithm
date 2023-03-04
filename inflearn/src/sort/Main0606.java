@@ -17,7 +17,7 @@ public class Main0606 {
 		for (int i = 0; i < N; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
-
+		
 		int[] copy = arr.clone();
 		Arrays.sort(copy);
 		for (int i = 0; i < N; i++) {
