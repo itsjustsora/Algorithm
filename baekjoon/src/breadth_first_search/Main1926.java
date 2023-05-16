@@ -50,14 +50,14 @@ public class Main1926 {
 	}
 
 	private static void BFS(int x, int y) {
-		Queue<Pair> queue = new LinkedList<>();
+		Queue<Point> queue = new LinkedList<>();
 		cnt++;
 		size++;
 		visited[x][y] = true;
-		queue.offer(new Pair(x, y));
+		queue.offer(new Point(x, y));
 
 		while (!queue.isEmpty()) {
-			Pair cur = queue.poll();
+			Point cur = queue.poll();
 
 			for (int i = 0; i < 4; i++) {
 				int nx = cur.x + dx[i];
@@ -67,7 +67,7 @@ public class Main1926 {
 				if (!visited[nx][ny] && paper[nx][ny] == 1) {
 					size++;
 					visited[nx][ny] = true;
-					queue.offer(new Pair(nx, ny));
+					queue.offer(new Point(nx, ny));
 				}
 			}
 		}
@@ -75,12 +75,3 @@ public class Main1926 {
 	}
 }
 
-class Pair {
-	int x;
-	int y;
-
-	public Pair(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
-}

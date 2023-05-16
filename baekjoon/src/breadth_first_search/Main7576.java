@@ -12,7 +12,7 @@ public class Main7576 {
 	static int[] dx = {-1, 0, 1, 0};
 	static int[] dy = {0, 1, 0, -1};
 	static int m, n;
-	static Queue<Position> queue = new LinkedList<>();
+	static Queue<Point> queue = new LinkedList<>();
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,7 +28,7 @@ public class Main7576 {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < m; j++) {
 				storage[i][j] = Integer.parseInt(st.nextToken());
-				if (storage[i][j] == 1) queue.offer(new Position(i, j));
+				if (storage[i][j] == 1) queue.offer(new Point(i, j));
 			}
 		}
 
@@ -57,13 +57,13 @@ public class Main7576 {
 
 	public static void BFS() {
 		while (!queue.isEmpty()) {
-			Position now = queue.poll();
+			Point now = queue.poll();
 			for (int i = 0; i < 4; i++) {
 				int nx = now.x + dx[i];
 				int ny = now.y + dy[i];
 				if (nx >= 0 && nx < n && ny >= 0 && ny < m && storage[nx][ny] == 0) {
 					storage[nx][ny] = 1;
-					queue.offer(new Position(nx, ny));
+					queue.offer(new Point(nx, ny));
 					days[nx][ny] = days[now.x][now.y] + 1;
 				}
 
@@ -72,12 +72,3 @@ public class Main7576 {
 	}
 }
 
-class Position {
-	int x;
-	int y;
-
-	public Position(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
-}
