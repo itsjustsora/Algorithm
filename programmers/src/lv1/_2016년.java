@@ -16,7 +16,7 @@ public class _2016년 {
 		return answer;
 	}
 
-	/**
+	/**년
 	 * OR
 	 * LocalDate.of(2016, a, b).getDayOfWeek().toString().substring(0, 3);
 	 */
