@@ -11,9 +11,7 @@ public class 푸드_파이트_대회 {
 			}
 		}
 
-		String answer = sb.toString() + "0"
+		return sb.toString() + "0"
 			+ sb.reverse().toString();
-
-		return answer;
 	}
 }
