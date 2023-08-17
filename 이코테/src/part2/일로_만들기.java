@@ -1,4 +1,4 @@
-package src;
+package src.part2;
 
 public class 일로_만들기 {
 

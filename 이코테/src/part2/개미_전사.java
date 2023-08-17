@@ -1,4 +1,4 @@
-package src;
+package src.part2;
 
 public class 개미_전사 {
 
