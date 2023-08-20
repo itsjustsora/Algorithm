@@ -63,7 +63,7 @@ public class 간단한_다익스트라_알고리즘 {
 			for (int j = 0; j < graph.get(now).size(); j++) {
 				Node node = graph.get(now).get(j);
 				int cost = d[now] + node.getDistance();
-				if (cost < node.getIndex()) {
+				if (cost < d[node.getIndex()]) {
 					d[node.getIndex()] = cost;
 				}
 
