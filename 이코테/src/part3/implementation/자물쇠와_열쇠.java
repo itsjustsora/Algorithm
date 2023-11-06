@@ -8,7 +8,7 @@ public class 자물쇠와_열쇠 {
 		int[][] newLock = new int[n*3][n*3];
 
 		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j+쇠+) {
+			for (int j = 0; j < n; j++) {
 				newLock[i + n][j + n] = lock[i][j];
 			}
 		}
