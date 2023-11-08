@@ -74,7 +74,7 @@ public class 뱀 {
 					queue.offer(new int[] {nx, ny});
 				}
 			} else {
-				time += 1;
+				time++;
 				break;
 			}
 
@@ -82,9 +82,9 @@ public class 뱀 {
 			y = ny;
 			time++;
 
-			if (index < 1 && map.containsKey(time)) {
+			if (index < l && map.containsKey(time)) {
 				direction = turn(direction, map.get(time));
-				index += 1;
+				index++;
 			}
 		}
 		return time;
