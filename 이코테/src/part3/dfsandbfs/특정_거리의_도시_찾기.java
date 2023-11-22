@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class 특정_거리의_도시_찾기 {
@@ -14,7 +13,7 @@ public class 특정_거리의_도시_찾기 {
 	public static int n, m, k, x;
 	public static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
 	public static int[] d;
-	public static Stack<Integer> stack = new Stack<>();
+
 	public static void main(String[] args) throws IOException {
 	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
