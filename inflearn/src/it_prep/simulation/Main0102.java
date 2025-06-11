@@ -1,4 +1,4 @@
-package it_prep;
+package it_prep.simulation;
 
 import java.util.*;
 class Main0102 {
